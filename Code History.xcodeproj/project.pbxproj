@@ -12,6 +12,7 @@
 		8714013B2ABBFDF800E76F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8714013A2ABBFDF800E76F69 /* Assets.xcassets */; };
 		8714013F2ABBFDF800E76F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8714013E2ABBFDF800E76F69 /* Preview Assets.xcassets */; };
 		8714014A2ABC0F6100E76F69 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871401492ABC0F6100E76F69 /* CustomButton.swift */; };
+		8714014C2AC0406E00E76F69 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8714014B2AC0406E00E76F69 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8714013C2ABBFDF800E76F69 /* Code_History.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Code_History.entitlements; sourceTree = "<group>"; };
 		8714013E2ABBFDF800E76F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		871401492ABC0F6100E76F69 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8714014B2AC0406E00E76F69 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				871401362ABBFDF600E76F69 /* Code_HistoryApp.swift */,
 				871401382ABBFDF600E76F69 /* ContentView.swift */,
+				8714014B2AC0406E00E76F69 /* Question.swift */,
 				8714013A2ABBFDF800E76F69 /* Assets.xcassets */,
 				8714013C2ABBFDF800E76F69 /* Code_History.entitlements */,
 				8714013D2ABBFDF800E76F69 /* Preview Content */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				871401392ABBFDF600E76F69 /* ContentView.swift in Sources */,
+				8714014C2AC0406E00E76F69 /* Question.swift in Sources */,
 				871401372ABBFDF600E76F69 /* Code_HistoryApp.swift in Sources */,
 				8714014A2ABC0F6100E76F69 /* CustomButton.swift in Sources */,
 			);
