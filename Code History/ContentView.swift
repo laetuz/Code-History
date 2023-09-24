@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let question = Question(questionText: "What was the first computer bug?", possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"], correctAnswerIndex: 2)
-    let mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
+    @State var mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
     let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
     var body: some View {
         ZStack {
@@ -25,10 +25,16 @@ struct ContentView: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 HStack {
-                    CustomButton(labelText: question.possibleAnswers[0])
-                    CustomButton(labelText: question.possibleAnswers[1])
-                    CustomButton(labelText: question.possibleAnswers[2])
-                    CustomButton(labelText: question.possibleAnswers[3])
+                    ForEach(0..<question.possibleAnswers.count) {
+                        answerIndex in CustomButton(
+                           // mainColor: mainColor,
+                            testEl: {
+                            mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
+                            },
+                            labelText: question.possibleAnswers[answerIndex],
+                            answerIndex: answerIndex == question.correctAnswerIndex ? .green : .red
+                        )
+                    }
                 }
             }.foregroundColor(.white)
         }

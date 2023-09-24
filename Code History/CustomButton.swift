@@ -8,29 +8,41 @@
 import SwiftUI
 
 struct CustomButton: View {
-    let mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
-    let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
+    var testEl: () -> Void
     let labelText: String
+    var answerIndex: Color
+    
     
     var body: some View {
         Button(
             action: {
                 print("Tapped on \(labelText)")
+                testEl()
             },
             label: {
-                Text(labelText)
-                    .font(.body)
-                    .bold()
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .border(accentColor, width: 4)
+                CustomButtonTextView(choiceText: labelText)
             }
         )
     }
 }
 
-struct CustomButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomButton(labelText: "Test")
+struct CustomButtonTextView: View {
+    let choiceText: String
+    let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
+    
+    var body: some View {
+        Text(choiceText)
+            .font(.body)
+            .bold()
+            .multilineTextAlignment(.center)
+            .padding()
+            .border(accentColor, width: 4)
     }
+    
 }
+
+//struct CustomButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CustomButton(labelText: "Test", answerIndex: .accentColor)
+//    }
+//}
