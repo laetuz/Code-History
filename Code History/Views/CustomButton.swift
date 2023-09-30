@@ -28,7 +28,6 @@ struct CustomButton: View {
 
 struct CustomButtonTextView: View {
     let choiceText: String
-    let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
     
     var body: some View {
         Text(choiceText)
@@ -36,13 +35,13 @@ struct CustomButtonTextView: View {
             .bold()
             .multilineTextAlignment(.center)
             .padding()
-            .border(accentColor, width: 4)
+            .border(GameColor.accentColor, width: 4)
     }
     
 }
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(testEl: {}, labelText: "Test", answerIndex: .accentColor)
+        CustomButton(testEl: {}, labelText: "Test", answerIndex: GameColor.accentColor)
     }
 }
