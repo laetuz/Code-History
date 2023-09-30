@@ -25,9 +25,9 @@ struct ContentView: View {
                     .multilineTextAlignment(.leading)
                 Spacer()
                 HStack {
-                    ForEach(0..<question.possibleAnswers.count) {
+                    let possibleAns = question.possibleAnswers.count
+                    ForEach(0..<possibleAns) {
                         answerIndex in CustomButton(
-                           // mainColor: mainColor,
                             testEl: {
                             mainColor = answerIndex == question.correctAnswerIndex ? .green : .red
                             },

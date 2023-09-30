@@ -41,8 +41,8 @@ struct CustomButtonTextView: View {
     
 }
 
-//struct CustomButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CustomButton(labelText: "Test", answerIndex: .accentColor)
-//    }
-//}
+struct CustomButton_Previews: PreviewProvider {
+    static var previews: some View {
+        CustomButton(testEl: {}, labelText: "Test", answerIndex: .accentColor)
+    }
+}
