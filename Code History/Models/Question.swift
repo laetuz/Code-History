@@ -32,6 +32,10 @@ struct Question: Hashable {
                 "C"
             ],
             correctAnswerIndex: 0
-        )
+        ),
+        Question(
+            questionText: "What was the first computer bug?",
+            possibleAnswers: ["Ant", "Beetle", "Moth", "Fly"],
+            correctAnswerIndex: 2)
     ]
 }
