@@ -46,4 +46,16 @@ class GameViewModel: ObservableObject {
             }
         } else { return GameColor.mainColor }
     }
+    
+    var gameIsOver: Bool {
+        game.isOver
+    }
+    
+    var correctGuesses: Int {
+        game.guessCount.correct
+    }
+    
+    var incorrectGuesses: Int {
+        game.guessCount.incorrect
+    }
 }
